@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yelp - Restaurants in Greencastle, IN</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    .business-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Header Section -->
+  <header class="bg-white shadow-lg sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-3">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg" 
+               alt="Yelp Logo" class="h-8 w-auto mr-4">
+          <div class="relative w-96">
+            <input type="text" placeholder="Search restaurants..." 
+                   class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-red-500">
+            <button class="absolute right-0 top-0 h-full px-4 text-gray-500">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <i class="fas fa-map-marker-alt text-red-500 mr-2"></i>
+          <span class="text-sm font-medium">Greencastle, IN 46135</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-4 py-8">
+    <div class="flex flex-col md:flex-row">
+      <!-- Filters Panel (Left Sidebar) -->
+      <aside class="w-full md:w-64 mb-6 md:mb-0 md:mr-8">
+        <div class="bg-white p-4 rounded-lg shadow-sm">
+          <h3 class="font-bold text-lg mb-4">Filter</h3>
+          
+          <!-- Categories -->
+          <div class="mb-6">
+            <h4 class="font-medium mb-2">Categories</h4>
+            <ul class="space-y-2">
+              <li><a href="#" class="text-blue-500 hover:underline">All</a></li>
+              <li><a href="#" class="text-gray-700 hover:underline">Italian</a></li>
+              <li><a href="#" class="text-gray-700 hover:underline">Mexican</a></li>
+              <li><a href="#" class="text-gray-700 hover:underline">American</a></li>
+              <li><a href="#" class="text-gray-700 hover:underline">Chinese</a></li>
+            </ul>
+          </div>
+
+          <!-- Price Range -->
+          <div class="mb-6">
+            <h4 class="font-medium mb-2">Price Range</h4>
+            <div class="flex space-x-2">
+              <button class="px-3 py-1 border border-gray-300 rounded-full text-sm">$</button>
+              <button class="px-3 py-1 border border-gray-300 rounded-full text-sm">$$</button>
+              <button class="px-3 py-1 border border-gray-300 rounded-full text-sm">$$$</button>
+              <button class="px-3 py-1 border border-gray-300 rounded-full text-sm">$$$$</button>
+            </div>
+          </div>
+
+          <!-- Distance -->
+          <div class="mb-6">
+            <h4 class="font-medium mb-2">Distance</h4>
+            <select class="w-full p-2 border border-gray-300 rounded">
+              <option>Any distance</option>
+              <option>0.5 miles</option>
+              <option>1 mile</option>
+              <option>5 miles</option>
+            </select>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Results Grid (Main Content) -->
+      <div class="flex-1">
+        <!-- Sorting Options -->
+        <div class="bg-white p-4 rounded-lg shadow-sm mb-4">
+          <div class="flex items-center justify-between">
+            <span class="text-sm text-gray-500">24 Results</span>
+            <select class="p-2 border border-gray-300 rounded text-sm">
+              <option>Best Match</option>
+              <option>Highest Rated</option>
+              <option>Most Reviewed</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Business Cards -->
+        <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Business Card 1 -->
+          <div class="business-card bg-white rounded-lg shadow-sm overflow-hidden transition duration-200">
+            <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg" 
+                 alt="Restaurant" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-1"><a href="business.html" class="hover:underline">Mario's Italian Bistro</a></h3>
+              <div class="flex items-center mb-2">
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="text-sm text-gray-500 ml-1">(128 reviews)</span>
+              </div>
+              <div class="text-sm text-gray-600 mb-2">
+                <span class="font-medium">$$</span> • Italian • 0.3 mi
+              </div>
+              <p class="text-sm text-gray-500">123 Main St, Greencastle, IN 46135</p>
+            </div>
+          </div>
+
+          <!-- Business Card 2 -->
+          <div class="business-card bg-white rounded-lg shadow-sm overflow-hidden transition duration-200">
+            <img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg" 
+                 alt="Restaurant" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-1"><a href="business.html" class="hover:underline">Taco Fiesta</a></h3>
+              <div class="flex items-center mb-2">
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500 ml-1">(87 reviews)</span>
+              </div>
+              <div class="text-sm text-gray-600 mb-2">
+                <span class="font-medium">$</span> • Mexican • 0.7 mi
+              </div>
+              <p class="text-sm text-gray-500">456 Elm St, Greencastle, IN 46135</p>
+            </div>
+          </div>
+
+          <!-- Business Card 3 -->
+          <div class="business-card bg-white rounded-lg shadow-sm overflow-hidden transition duration-200">
+            <img src="https://images.pexels.com/photos/675951/pexels-photo-675951.jpeg" 
+                 alt="Restaurant" class="w-full h-48 object-cover">
+            <div class="p-4">
+              <h3 class="font-bold text-lg mb-1"><a href="business.html" class="hover:underline">The Burger Joint</a></h3>
+              <div class="flex items-center mb-2">
+                <div class="flex text-yellow-400">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="text-sm text-gray-500 ml-1">(215 reviews)</span>
+              </div>
+              <div class="text-sm text-gray-600 mb-2">
+                <span class="font-medium">$$</span> • American • 1.2 mi
+              </div>
+              <p class="text-sm text-gray-500">789 Oak St, Greencastle, IN 46135</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-8 flex justify-center">
+          <nav class="flex items-center space-x-2">
+            <button class="px-3 py-1 rounded border border-gray-300 text-sm">Previous</button>
+            <button class="px-3 py-1 rounded bg-red-500 text-white text-sm">1</button>
+            <button class="px-3 py-1 rounded border border-gray-300 text-sm">2</button>
+            <button class="px-3 py-1 rounded border border-gray-300 text-sm">3</button>
+            <button class="px-3 py-1 rounded border border-gray-300 text-sm">Next</button>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <footer class="bg-gray-100 py-8 mt-16">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div class="mb-6 md:mb-0">
+          <img src="https://images.pexels.com/photos/163064/play-stone-network-networked-interactive-163064.jpeg" 
+               alt="Yelp Logo" class="h-6 w-auto mb-4">
+          <p class="text-sm text-gray-500">© 2023 Yelp Clone</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div>
+            <h4 class="font-medium mb-3">About</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="hover:underline">About Us</a></li>
+              <li><a href="#" class="hover:underline">Careers</a></li>
+              <li><a href="#" class="hover:underline">Press</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium mb-3">Discover</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="hover:underline">Yelp for Business</a></li>
+              <li><a href="#" class="hover:underline">Collections</a></li>
+              <li><a href="#" class="hover:underline">Talk</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-medium mb-3">Legal</h4>
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li><a href="#" class="hover:underline">Terms of Service</a></li>
+              <li><a href="#" class="hover:underline">Privacy Policy</a></li>
+              <li><a href="#" class="hover:underline">Cookie Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
